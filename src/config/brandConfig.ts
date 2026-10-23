@@ -1,0 +1,46 @@
+import { BrandConfig } from '../types';
+
+export const BRAND_CONFIG: BrandConfig = {
+  studioName: 'Bare Nail Spa',
+  tagline: 'The Atelier of Bare Luxury & Precision Nail Artistry',
+  editorialSubhead: 'Where medical-grade sterilization meets haute Parisian nail aesthetics in Malabe.',
+  address: '411/E Athurugiriya Rd',
+  city: 'Malabe',
+  postalCode: '10115',
+  phone: '+94 77 990 0135',
+  whatsapp: '+94 77 990 0135',
+  instagramHandle: '@bare.nailspa',
+  googleBusinessName: 'Bare Nail Spa',
+  currency: {
+    code: 'LKR',
+    symbol: 'Rs.',
+    format: (amount: number) => `Rs. ${amount.toLocaleString('en-LK')}`,
+  },
+  palette: {
+    clayRose: '#B87A6E',
+    rosewood: '#9A5C52',
+    champagne: '#C9A66B',
+    sageMist: '#A9B8A3',
+    boneLinen: '#F7F1EA',
+    espressoInk: '#2F2522',
+    cocoaNight: '#3B2E2A',
+  },
+  loyaltyRules: {
+    totalStamps: 10,
+    welcomeGiftEnabled: true,
+    milestone1Visit: 5,
+    milestone1DiscountPct: 50,
+    milestone1Title: '50% OFF Privilege Voucher',
+    milestone2Visit: 10,
+    milestone2DiscountPct: 100,
+    milestone2MaxCapLKR: 5000,
+    milestone2Title: '100% OFF Privilege (Up to Rs. 5,000 Cap)',
+    nfcSecretToken: 'ATELIER_STAMP_2026',
+    cooldownHours: 12,
+  },
+  operatingHours: {
+    days: 'Monday – Sunday',
+    hours: '09:00 AM – 07:00 PM',
+    closedOnHolidays: false,
+  },
+};
