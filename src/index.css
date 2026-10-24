@@ -15,6 +15,18 @@
   }
 }
 
+/* Adaptive Brand Logo for Light & Dark Mode / High-Contrast Support */
+.nav-brand-logo {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-brand-logo {
+    /* Transforms dark mark to crisp luxury warm linen with champagne edge and depth */
+    filter: brightness(0) invert(0.96) drop-shadow(0 0 1px rgba(201, 166, 107, 0.6)) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+  }
+}
+
 /* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 6px;

@@ -64,13 +64,19 @@ export const Navbar: React.FC = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
         
-        {/* Brand Logo Symbol */}
+        {/* Brand Logo Symbol (Adaptive Light & Dark Mode) */}
         <Link to="/" onClick={handleHomeClick} className="flex items-center group py-0.5 shrink-0">
-          <img 
-            src={asset('assets/logo-nav.png')} 
-            alt={BRAND_CONFIG.studioName}
-            className="h-10 sm:h-12 md:h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-          />
+          <picture className="flex items-center">
+            <source
+              srcSet={asset('assets/logo-nav-dark.png')}
+              media="(prefers-color-scheme: dark)"
+            />
+            <img 
+              src={asset('assets/logo-nav.png')} 
+              alt={BRAND_CONFIG.studioName}
+              className="nav-brand-logo h-10 sm:h-12 md:h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+          </picture>
         </Link>
 
         {/* Enhanced Desktop Navigation Bar */}
