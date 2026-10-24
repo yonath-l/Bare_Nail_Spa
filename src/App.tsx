@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { LoyaltyProvider } from './context/LoyaltyContext';
 import { BookingProvider } from './context/BookingContext';
 import { Navbar } from './components/common/Navbar';
@@ -79,14 +79,14 @@ const AppLayout: React.FC = () => {
 
 export const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <LoyaltyProvider>
         <BookingProvider>
           <ScrollToTop />
           <AppLayout />
         </BookingProvider>
       </LoyaltyProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

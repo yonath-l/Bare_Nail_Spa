@@ -1,3 +1,4 @@
+import { asset } from '../../utils/assetHelper';
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Sparkles, Calendar, Menu, X, ShieldCheck, Home } from 'lucide-react';
@@ -67,7 +68,7 @@ export const Navbar: React.FC = () => {
         <Link to="/" onClick={handleHomeClick} className="flex items-center space-x-3 group">
           <div className="w-12 h-12 rounded-full overflow-hidden border border-champagne/70 ring-2 ring-champagne/25 p-0.5 shadow-sm group-hover:ring-rosewood/40 transition-all duration-300">
             <img 
-              src="/assets/logo.jpg" 
+              src={asset('assets/logo.jpg')} 
               alt={BRAND_CONFIG.studioName}
               className="w-full h-full object-cover rounded-full"
             />

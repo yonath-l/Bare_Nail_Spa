@@ -1,3 +1,4 @@
+import { asset } from '../../../utils/assetHelper';
 import React, { useState } from 'react';
 import { Plus, Edit2, Trash2, Film, Play, Upload, X, Eye, Clock, Sparkles } from 'lucide-react';
 import { MediaReel } from '../../../types';

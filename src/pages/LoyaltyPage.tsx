@@ -1,3 +1,4 @@
+import { asset } from '../utils/assetHelper';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -165,7 +166,7 @@ export const LoyaltyPage: React.FC = () => {
                 <div className="w-full flex items-center justify-between border-b border-linen/10 pb-4 text-xs">
                   <div className="flex items-center space-x-2 text-left">
                     <div className="w-10 h-10 rounded-full border border-champagne/40 overflow-hidden shrink-0 ring-2 ring-champagne/20">
-                      <img src="/assets/logo.jpg" alt="Logo" className="w-full h-full object-cover" />
+                      <img src={asset('assets/logo.jpg')} alt="Logo" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="font-serif text-base font-bold text-linen leading-none">

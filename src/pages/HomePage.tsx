@@ -1,3 +1,4 @@
+import { asset } from '../utils/assetHelper';
 import React, { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
@@ -56,10 +57,10 @@ export const HomePage: React.FC = () => {
             loop
             muted
             playsInline
-            poster="/assets/hero-poster.jpg"
+            poster={asset('assets/hero-poster.jpg')}
             className="w-full h-full object-cover filter brightness-[0.82] contrast-[1.05]"
           >
-            <source src="/assets/hero-loop.mp4" type="video/mp4" />
+            <source src={asset('assets/hero-loop.mp4')} type="video/mp4" />
           </video>
           {/* Directional Translucent Soft Gradient: Darker on the left for crisp text contrast, revealing video on the right */}
           <div className="absolute inset-0 bg-gradient-to-r from-espresso/90 via-espresso/65 to-espresso/35 sm:to-transparent"></div>
@@ -148,7 +149,7 @@ export const HomePage: React.FC = () => {
         {/* Atmospheric Background Image Layer (z-0 to sit firmly above page canvas) */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
-            src="/assets/home/bg-elevating.jpg"
+            src={asset('assets/home/bg-elevating.jpg')}
             alt="Elevating Nail Care Ambiance"
             className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.05]"
           />
@@ -245,7 +246,7 @@ export const HomePage: React.FC = () => {
         {/* Atmospheric Background Image Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
-            src="/assets/home/bg-sanctuary.jpg"
+            src={asset('assets/home/bg-sanctuary.jpg')}
             alt="Sanctuary Architecture Ambiance"
             className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.05]"
           />
@@ -261,7 +262,7 @@ export const HomePage: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-3xl overflow-hidden border border-rosewood/15 shadow-luxury-subtle group">
                     <img
-                      src="/assets/about-interior-1.jpg"
+                      src={asset('assets/about-interior-1.jpg')}
                       alt="Bare Nail Spa Atelier Interior"
                       className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
                     />
@@ -269,14 +270,14 @@ export const HomePage: React.FC = () => {
                   <div className="space-y-4">
                     <div className="rounded-3xl overflow-hidden border border-rosewood/15 shadow-luxury-subtle group">
                       <img
-                        src="/assets/store-interior.webp"
+                        src={asset('assets/store-interior.webp')}
                         alt="Bare Nail Spa Pedicure Suites"
                         className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                     <div className="rounded-3xl overflow-hidden border border-rosewood/15 shadow-luxury-subtle group">
                       <img
-                        src="/assets/about-interior-2.jpg"
+                        src={asset('assets/about-interior-2.jpg')}
                         alt="Bare Nail Spa Decor"
                         className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-700"
                       />
@@ -355,7 +356,7 @@ export const HomePage: React.FC = () => {
           {/* Background Loyalty Card Texture (Firmly positioned at z-0) */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <img
-              src="/assets/home/bg-loyalty-card.jpg"
+              src={asset('assets/home/bg-loyalty-card.jpg')}
               alt="Loyalty Card Texture"
               className="w-full h-full object-cover filter brightness-[0.75] contrast-[1.1]"
             />
@@ -426,7 +427,7 @@ export const HomePage: React.FC = () => {
                   <div className="w-20 h-4 bg-espresso-light rounded-full mb-2"></div>
                   
                   <div className="w-12 h-12 rounded-full overflow-hidden border border-champagne mb-1 ring-2 ring-champagne/30">
-                    <img src="/assets/logo.jpg" alt="Logo" className="w-full h-full object-cover" />
+                    <img src={asset('assets/logo.jpg')} alt="Logo" className="w-full h-full object-cover" />
                   </div>
 
                   <span className="font-serif text-lg text-linen font-bold">Bare Loyalty Pass</span>
@@ -460,7 +461,7 @@ export const HomePage: React.FC = () => {
         {/* Atmospheric Background Image Layer (z-0 to ensure visible canvas layer) */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
-            src="/assets/home/bg-media-showcase.jpg"
+            src={asset('assets/home/bg-media-showcase.jpg')}
             alt="Bare Media Showcase Ambiance"
             className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.05]"
           />
@@ -554,7 +555,7 @@ export const HomePage: React.FC = () => {
         {/* Atmospheric Background Image Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
-            src="/assets/home/bg-patrons-say.jpg"
+            src={asset('assets/home/bg-patrons-say.jpg')}
             alt="Patrons Review Ambiance"
             className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.05]"
           />

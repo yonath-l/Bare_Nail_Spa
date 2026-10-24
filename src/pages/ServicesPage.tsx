@@ -1,3 +1,4 @@
+import { asset } from '../utils/assetHelper';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Clock, Sparkles, Check, ArrowRight, Calendar, ShieldCheck } from 'lucide-react';
@@ -98,10 +99,10 @@ export const ServicesPage: React.FC = () => {
                 loop
                 muted
                 playsInline
-                poster="/assets/reel-2-poster.jpg"
+                poster={asset('assets/reel-2-poster.jpg')}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               >
-                <source src="/assets/reel-2.mp4" type="video/mp4" />
+                <source src={asset('assets/reel-2.mp4')} type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent flex items-end p-5 text-linen">
                 <div>

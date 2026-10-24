@@ -1,3 +1,4 @@
+import { asset } from '../../../utils/assetHelper';
 import React, { useState } from 'react';
 import { Plus, Edit2, Trash2, Star, Check, X, Upload, ShieldCheck, Award, Sparkles } from 'lucide-react';
 import { StaffSpecialist, TreatmentCategory } from '../../../types';

@@ -1,3 +1,4 @@
+import { asset } from '../utils/assetHelper';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -275,7 +276,7 @@ export const AdminPage: React.FC = () => {
           {/* Brand Lockup */}
           <div className="flex items-center space-x-3 shrink-0">
             <div className="w-10 h-10 rounded-2xl bg-[#F7D6D0] border-2 border-[#E2B4BD] overflow-hidden shadow-xs p-0.5 flex items-center justify-center">
-              <img src="/assets/logo.jpg" alt="Logo" className="w-full h-full object-cover rounded-xl" />
+              <img src={asset('assets/logo.jpg')} alt="Logo" className="w-full h-full object-cover rounded-xl" />
             </div>
             <div>
               <h1 className="font-serif text-lg font-bold text-[#4A4A4A] leading-tight">

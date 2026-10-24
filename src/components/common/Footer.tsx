@@ -1,3 +1,4 @@
+import { asset } from '../../utils/assetHelper';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Instagram, Clock, ShieldCheck, Heart } from 'lucide-react';
@@ -13,7 +14,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-4 md:col-span-1">
             <div className="flex items-center space-x-3">
               <img 
-                src="/assets/logo.jpg" 
+                src={asset('assets/logo.jpg')} 
                 alt={BRAND_CONFIG.studioName}
                 className="w-10 h-10 rounded-full border border-champagne/40 object-cover" 
               />

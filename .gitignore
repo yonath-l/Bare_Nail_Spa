@@ -30,3 +30,11 @@ dist-ssr/
 .env
 .env.*
 !.env.example
+
+# Raw working assets & temporary analysis files
+Service list/
+Visuals/
+*.pdf
+*.cjs
+*.txt
+page_*.png

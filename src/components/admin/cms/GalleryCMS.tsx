@@ -1,3 +1,4 @@
+import { asset } from '../../../utils/assetHelper';
 import React, { useState } from 'react';
 import { Plus, Edit2, Trash2, Check, X, Upload, Sparkles, Image as ImageIcon, Tag } from 'lucide-react';
 import { GalleryItem } from '../../../types';
