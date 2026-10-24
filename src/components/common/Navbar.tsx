@@ -64,23 +64,13 @@ export const Navbar: React.FC = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
         
-        {/* Brand Logo & Name */}
-        <Link to="/" onClick={handleHomeClick} className="flex items-center space-x-3 group">
-          <div className="w-12 h-12 rounded-full overflow-hidden border border-champagne/70 ring-2 ring-champagne/25 p-0.5 shadow-sm group-hover:ring-rosewood/40 transition-all duration-300">
-            <img 
-              src={asset('assets/logo.jpg')} 
-              alt={BRAND_CONFIG.studioName}
-              className="w-full h-full object-cover rounded-full"
-            />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-2xl font-semibold tracking-wide text-espresso group-hover:text-rosewood transition-colors">
-              {BRAND_CONFIG.studioName}
-            </span>
-            <span className="text-[10px] tracking-luxury uppercase text-clay font-medium -mt-1">
-              Atelier · Malabe
-            </span>
-          </div>
+        {/* Brand Logo Symbol */}
+        <Link to="/" onClick={handleHomeClick} className="flex items-center group py-0.5 shrink-0">
+          <img 
+            src={asset('assets/logo-nav.png')} 
+            alt={BRAND_CONFIG.studioName}
+            className="h-10 sm:h-12 md:h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+          />
         </Link>
 
         {/* Enhanced Desktop Navigation Bar */}
@@ -168,32 +158,41 @@ export const Navbar: React.FC = () => {
           </Link>
         </nav>
 
-        {/* Action Button & Reservation CTA */}
+        {/* Action Button & Reservation CTA (Desktop) */}
         <div className="hidden md:flex items-center space-x-4">
           <Link
             to="/book"
             className="btn-sheen inline-flex items-center space-x-2 bg-gradient-to-r from-rosewood to-espresso hover:from-rosewood-dark hover:to-espresso text-white px-5 py-2.5 rounded-full text-xs uppercase tracking-luxury font-medium transition-all duration-300 shadow-luxury-subtle hover:shadow-luxury-gold hover:scale-[1.02] border border-champagne/30"
           >
             <Calendar className="w-3.5 h-3.5 text-champagne-light" />
-            <span>Reserve Session</span>
+            <span>Book a Session</span>
           </Link>
         </div>
 
-        {/* Mobile Hamburger & Loyalty Quick Icon */}
-        <div className="flex md:hidden items-center space-x-2">
+        {/* Mobile Right Controls: Book a Session CTA + Loyalty + Hamburger */}
+        <div className="flex md:hidden items-center space-x-1.5 sm:space-x-2 shrink-0">
+          <Link
+            to="/book"
+            className="btn-sheen inline-flex items-center space-x-1.5 bg-gradient-to-r from-rosewood to-espresso hover:from-rosewood-dark hover:to-espresso text-white px-3 sm:px-4 py-2 rounded-full text-[11px] sm:text-xs uppercase tracking-luxury font-medium shadow-luxury-subtle border border-champagne/30 active:scale-95 transition-all"
+          >
+            <Calendar className="w-3.5 h-3.5 text-champagne-light shrink-0" />
+            <span>Book a Session</span>
+          </Link>
+
           <Link
             to="/loyalty"
             aria-label="Loyalty Pass"
-            className="p-2 rounded-full border border-champagne/60 bg-champagne/15 text-espresso shadow-xs"
+            className="p-2 rounded-full border border-champagne/60 bg-champagne/15 text-espresso shadow-xs hover:bg-champagne/25 transition-colors"
           >
-            <Sparkles className="w-4 h-4 text-champagne-dark" />
+            <Sparkles className="w-3.5 h-3.5 text-champagne-dark" />
           </Link>
+
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-espresso hover:text-rosewood border border-rosewood/15 rounded-xl bg-white/70 focus:outline-none transition-colors"
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -287,20 +286,11 @@ export const Navbar: React.FC = () => {
               </span>
             </Link>
 
-            {/* 7. Reserve Session */}
-            <Link
-              to="/book"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center bg-rosewood text-white py-3 rounded-full text-xs uppercase tracking-luxury font-medium shadow-md mt-2"
-            >
-              Reserve Session
-            </Link>
-
             {/* Admin Desk Link */}
             <Link
               to="/admin"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center space-x-1.5 text-[11px] text-espresso/50 hover:text-espresso py-2"
+              className="flex items-center justify-center space-x-1.5 text-[11px] text-espresso/50 hover:text-espresso py-2 pt-3"
             >
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Reception & Cashier Portal</span>
